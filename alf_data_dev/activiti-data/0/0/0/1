@@ -1,0 +1,335 @@
+    angular.module('activitiApp')
+            .controller('RESTDropdownController', ['$rootScope', '$scope', '$http', function ($rootScope, $scope, $http) {
+  
+  $scope.oFVC = function(field){
+      console.log("fieldValueChanged"+ JSON.stringify(field.value));
+      $scope.value  = field.value.id;
+  }
+  
+                console.log('MyController instantiated');
+        
+                // Register this controller to listen to the form extensions methods
+                $scope.registerCustomFieldListener(this);
+
+                // Deregister on form destroy
+                $scope.$on("$destroy", function handleDestroyEvent() {
+                    console.log("destroy event");
+                    $scope.removeCustomFieldListener(this);
+                });
+
+                // Setting the value before completing the task so it's properly stored
+                this.formBeforeComplete = function(form, outcome, scope) {
+                  if ($scope.field.value !== undefined && $scope.field.value !==null){
+                      $scope.field.value = $scope.field.value.id;
+                    }
+                };
+
+                // Needed when the completed form is rendered
+                this.formRendered = function(form, scope) {
+                };
+                
+                
+                                
+function queryParams(params) {
+                var qP = "";
+                var isFirst = true;
+
+                for (var paramName in params) {
+
+                  if (isFirst === true) {
+                     qP+= "?";
+                        isFirst = false;
+                      } else {
+                       qP+= "&";
+                  }
+
+                  qP+= paramName+"="+params[paramName];
+                 }
+
+              return qP;
+}
+
+console.log("creating updateRestValues method");
+
+function translateResponse(data, mappings){
+    var result = [];
+     result.push({
+         "id":"-1",
+         "name":"Empty",
+     }); 
+     
+    for (var i = 0 ; i < data.length; i++){
+     result.push({
+         "id":data[i][mappings["id"]],
+         "name":data[i][mappings["name"]],
+     }); 
+    }   
+  return result;
+}
+
+$rootScope.resetField = function(fieldId , formRenderingScope){
+     var allFields = formRenderingScope.allFormFields;
+ 
+        var field = formRenderingScope.findFormFieldWithId(allFields, fieldId);
+        field.options = [];
+        $scope.value = null;
+        field.value = null
+}
+
+$rootScope.updateRestValues = function (fieldId , parameters , formRenderingScope) {
+         var allFields = formRenderingScope.allFormFields;
+ 
+        var field = formRenderingScope.findFormFieldWithId(allFields, fieldId);
+        $scope.value  = field.value;
+        
+        console.log("found field: "+JSON.stringify(field));
+        field.options = [];
+        
+        var restURL = field.params.customProperties.restURL+queryParams(parameters);
+        console.log("calling: "+restURL);
+        
+            $http({method: 'GET', url: restURL}).
+            success(function (response, status, headers, config) {
+                
+                console.log("response: "+JSON.stringify(response));
+
+                var mappings = {"id":"id", "name" : "label"};
+                field.options = translateResponse(response, mappings);
+                
+                if ($scope.value && response && response.length) {
+                    for (var i = 0; i < response.length; i++) {
+                        if (response[i].id == $scope.value) {
+                            $scope.value = response[i];
+                            console.log("scope value = "+JSON.stringify($scope.value));
+                            break;
+                        }
+                    }
+                }
+
+                if (formRenderingScope.model.customFieldListeners.length > 0) {
+                    for (var i = 0; i < $scope.model.customFieldListeners.length; i++) {
+                        if (formRenderingScope.model.customFieldListeners[i].formFieldRestValuesSet) {
+                            formRenderingScope.model.customFieldListeners[i].formFieldRestValuesSet(formRenderingScope.formData, field, formRenderingScope);
+                        }
+                    }
+                }
+
+                if (typeof ALFRESCO !== 'undefined' && typeof ALFRESCO.formExtensions !== 'undefined' && typeof ALFRESCO.formExtensions.formFieldRestValuesSet !== 'undefined') {
+                    ALFRESCO.formExtensions.formFieldRestValuesSet(formRenderingScope.formData, field, formRenderingScope);
+                }
+
+                if (formRenderingScope.customJavascriptEvents['formFieldRestValuesSet']) {
+                    formRenderingScope.customJavascriptEvents['formFieldRestValuesSet'](formRenderingScope.formData, field, formRenderingScope);
+                }
+
+                formRenderingScope.validateField();
+            });
+            }
+
+            }]);
+
+    angular.module('activitiApp')
+            .controller('CustomDataTableController', ['$rootScope', '$scope', '$http' , '$translate', '$q', function ($rootScope, $scope, $http, $translate , $q) {
+ 
+
+                // Register this controller to listen to the form extensions methods
+                $scope.registerCustomFieldListener(this);
+
+                // Deregister on form destroy
+                $scope.$on("$destroy", function handleDestroyEvent() {
+                    $scope.removeCustomFieldListener(this);
+                });
+
+                // Setting the value before completing the task so it's properly stored
+                this.formBeforeComplete = function(form, outcome, scope) {
+                     if ($scope.field.value !== undefined && $scope.field.value !==null){
+                      $scope.field.value = $scope.field.value.partNo;
+                    }
+                };
+
+                // Needed when the completed form is rendered
+                this.formRendered = function(form, scope) {
+                };
+                
+ 
+ 
+            $scope.labels = {};
+      
+            $scope.labels.partNoLabel = 'Part No';
+            $scope.labels.partDescriptionLabel = 'Part Description';
+            $scope.labels.quantityLabel = 'Quantity';
+            $scope.labels.priceLabel = 'Price';
+            
+            
+            $scope.translationsRetrieved = true;
+            $scope.options = [];
+
+            $scope.fieldType = "normal";
+            
+  // Config for grid
+  $scope.gridOptions = {
+    data: $scope.options,
+    headerRowHeight: 28,
+    enableRowSelection: true,
+    enableRowHeaderSelection: false,
+    multiSelect: false,
+    modifierKeysToMultiSelect: false,
+    enableHorizontalScrollbar: 0,
+    enableColumnMenus: false,
+    enableSorting: false,
+    columnDefs: [
+      {
+        field: 'partNo',
+        visible: true,
+        displayName: $scope.labels.partNoLabel,
+         cellTemplate: '<div class="ui-grid-cell-contents">{{row.entity.partNo}}</div>'
+      },
+      {
+        field: 'partDescription',
+        displayName: $scope.labels.partDescriptionLabel,
+         cellTemplate: '<div class="ui-grid-cell-contents">{{row.entity.partDescription}}</div>'
+      },
+      {
+        field: 'quantity',
+        displayName: $scope.labels.quantityLabel,
+         cellTemplate: '<div class="ui-grid-cell-contents">{{row.entity.quantity}}</div>'
+      },
+      {
+        field: 'price',
+        displayName: $scope.labels.priceLabel,
+         cellTemplate: '<div class="ui-grid-cell-contents">{{row.entity.price}}</div>'
+      }
+    ]
+  }
+  
+
+  $scope.gridOptions.onRegisterApi = function(gridApi) {
+    $scope.gridApi = gridApi;
+
+    gridApi.selection.on.rowSelectionChanged($scope, function(row) {
+      if (row.isSelected) {
+        $scope.field.value = row.entity;
+      } else {
+        $scope.field.value = undefined;
+      }
+
+      $scope.onFieldValueChange($scope.field);
+    });
+
+
+    $scope.gridApi.grid.registerDataChangeCallback(function(data){
+        if ($scope.selectedRow !== undefined){
+                      $scope.gridOptions.enableRowSelection = true;
+                      $scope.gridApi.selection.selectRow($scope.selectedRow);
+                      $scope.gridOptions.enableRowSelection = ($scope.fieldType != 'readonly'); 
+                    }
+        
+    });
+  }
+
+
+                                
+function queryParams(params) {
+                var qP = "";
+                var isFirst = true;
+
+                for (var paramName in params) {
+
+                  if (isFirst === true) {
+                     qP+= "?";
+                        isFirst = false;
+                      } else {
+                       qP+= "&";
+                  }
+
+                  qP+= paramName+"="+params[paramName];
+                 }
+
+              return qP;
+}
+
+
+function translateResponse(data, mappings){
+    var result = [];
+    for (var i = 0 ; i < data.length; i++){
+     result.push({
+         "partNo":data[i][mappings["partNo"]],
+         "partDescription":data[i][mappings["partDescription"]],
+        
+         "quantity":data[i][mappings["quantity"]],
+         "price":data[i][mappings["price"]],
+         
+     }); 
+    }   
+  return result;
+}
+
+
+$rootScope.updateRestDataTable = function (fieldId , parameters , formRenderingScope) {
+         var allFields = formRenderingScope.allFormFields;
+ 
+        var field = formRenderingScope.findFormFieldWithId(allFields, fieldId);
+        
+        $scope.value  = field.value;
+        $scope.fieldType = field.type;
+        
+        console.log("$scope.value="+JSON.stringify($scope.value));
+        field.value = undefined;
+        
+        $scope.field = field;
+        
+        $scope.onFieldValueChange($scope.field);
+        
+        $scope.options.splice(0,$scope.options.length);
+        
+        var restURL = field.params.customProperties.dtRestURL+queryParams(parameters);
+        
+            $http({method: 'GET', url: restURL}).
+            success(function (response, status, headers, config) {
+                
+                var mappings = {"partNo":"id", "partDescription" : "description", "quantity":"quantity", "price":"price"};
+                var transformedData = translateResponse(response, mappings);
+                var selectedIndex = 0;
+                
+                for ( var i = 0; i < transformedData.length;i++){
+                    if (($scope.value !== undefined && $scope.value !=null) && 
+                    ((transformedData[i].partNo == $scope.value) || (transformedData[i].partNo == $scope.value.partNo))) {
+                        $scope.selectedRow = transformedData[i];
+                        console.log("Selected1 "+$scope.value)
+                    }
+                       $scope.options.push(transformedData[i]);
+                }
+                
+            });
+            }
+
+            }]);
+
+    angular.module('activitiApp')
+            .controller('JavascriptDisplayController', ['$rootScope', '$scope', '$http' , '$translate', '$q', function ($rootScope, $scope, $http, $translate , $q) {
+ 
+ 
+ 
+                console.log('JavascriptDisplayController instantiated');
+        
+                // Register this controller to listen to the form extensions methods
+                $scope.registerCustomFieldListener(this);
+
+                // Deregister on form destroy
+                $scope.$on("$destroy", function handleDestroyEvent() {
+                    console.log("destroy event");
+                    $scope.removeCustomFieldListener(this);
+                });
+
+                // Setting the value before completing the task so it's properly stored
+                this.formBeforeComplete = function(form, outcome, scope) {
+                    console.log('Before form complete');
+                };
+
+                // Needed when the completed form is rendered
+                this.formRendered = function(form, scope) {
+                };
+                
+
+            }]);
+

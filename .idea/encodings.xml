@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding">
+    <file url="file://$PROJECT_DIR$" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/activiti-app" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/activiti-extension-module" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/activitiservicetasks-repo-amp" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/activitiservicetasks-share-amp" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/repo" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/runner" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/share" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/solr-config" charset="UTF-8" />
+  </component>
+</project>

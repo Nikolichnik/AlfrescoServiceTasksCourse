@@ -1,0 +1,6 @@
+#FileLock
+#Mon Feb 04 06:19:40 PST 2019
+hostName=host-1.skytap.example
+id=168b8e1007757cad8a420f13a8e53e10ef7cc65e53b
+method=file
+server=127.0.1.1\:45520

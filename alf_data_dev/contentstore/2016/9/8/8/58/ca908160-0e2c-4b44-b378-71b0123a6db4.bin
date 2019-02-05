@@ -1,0 +1,27 @@
+#
+# Alfresco version information
+#
+
+# Version label
+
+version.major=5
+version.minor=1
+version.revision=1
+version.label=
+
+# Edition label
+
+version.edition=Enterprise
+
+# SCM Revision number
+
+version.scmrevision=https://svn.alfresco.com/repos/alfresco-enterprise/alfresco/PATCHES/5.1.1-r128754
+
+# Build number
+
+version.build=r128754-b138
+
+# Schema number
+
+version.schema=9031
+

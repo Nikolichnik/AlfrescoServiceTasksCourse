@@ -1,0 +1,2 @@
+2016-10-10 05:29:01,206 INFO  [org.alfresco.solr.component.AsyncBuildSuggestComponent] Building suggester index for: shingleBasedSuggestions
+2016-10-10 05:29:01,496 INFO  [org.alfresco.solr.component.AsyncBuildSuggestComponent] Built suggester shingleBasedSuggestions, took 290 ms

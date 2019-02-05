@@ -1,0 +1,313 @@
+2016-10-11 03:35:30,001 ERROR [org.quartz.core.JobRunShell] [DefaultScheduler_Worker-6] Job DEFAULT.feedGeneratorJobDetail threw an unhandled Exception: 
+org.alfresco.repo.security.permissions.AccessDeniedException: 09110008 Access Denied.  The system is currently in read-only mode.
+	at org.alfresco.repo.transaction.RetryingTransactionHelper.doInTransaction(RetryingTransactionHelper.java:404)
+	at org.alfresco.repo.activities.feed.AbstractFeedGenerator.execute(AbstractFeedGenerator.java:183)
+	at org.alfresco.repo.activities.feed.FeedGeneratorJob.execute(FeedGeneratorJob.java:57)
+	at org.quartz.core.JobRunShell.run(JobRunShell.java:216)
+	at org.quartz.simpl.SimpleThreadPool$WorkerThread.run(SimpleThreadPool.java:563)
+2016-10-11 03:35:30,002 ERROR [org.quartz.core.ErrorLogger] [DefaultScheduler_Worker-6] Job (DEFAULT.feedGeneratorJobDetail threw an exception.
+org.quartz.SchedulerException: Job threw an unhandled exception. [See nested exception: org.alfresco.repo.security.permissions.AccessDeniedException: 09110008 Access Denied.  The system is currently in read-only mode.]
+	at org.quartz.core.JobRunShell.run(JobRunShell.java:227)
+	at org.quartz.simpl.SimpleThreadPool$WorkerThread.run(SimpleThreadPool.java:563)
+Caused by: org.alfresco.repo.security.permissions.AccessDeniedException: 09110008 Access Denied.  The system is currently in read-only mode.
+	at org.alfresco.repo.transaction.RetryingTransactionHelper.doInTransaction(RetryingTransactionHelper.java:404)
+	at org.alfresco.repo.activities.feed.AbstractFeedGenerator.execute(AbstractFeedGenerator.java:183)
+	at org.alfresco.repo.activities.feed.FeedGeneratorJob.execute(FeedGeneratorJob.java:57)
+	at org.quartz.core.JobRunShell.run(JobRunShell.java:216)
+	... 1 more
+2016-10-11 03:35:31,690 ERROR [org.alfresco.fileserver] [FileStateReaper] Error from JLAN
+java.lang.IllegalStateException: Hazelcast Instance is not active!
+	at com.hazelcast.impl.FactoryImpl.initialChecks(FactoryImpl.java:711)
+	at com.hazelcast.impl.MProxyImpl.beforeCall(MProxyImpl.java:102)
+	at com.hazelcast.impl.MProxyImpl.access$000(MProxyImpl.java:49)
+	at com.hazelcast.impl.MProxyImpl$DynamicInvoker.invoke(MProxyImpl.java:64)
+	at com.sun.proxy.$Proxy488.localKeySet(Unknown Source)
+	at com.hazelcast.impl.MProxyImpl.localKeySet(MProxyImpl.java:340)
+	at org.alfresco.jlan.server.filesys.cache.hazelcast.HazelCastClusterFileStateCache.removeExpiredFileStates(HazelCastClusterFileStateCache.java:771)
+	at org.alfresco.jlan.server.filesys.cache.FileStateReaper.run(FileStateReaper.java:198)
+	at java.lang.Thread.run(Thread.java:745)
+2016-10-11 03:35:46,692 ERROR [org.alfresco.fileserver] [FileStateReaper] Error from JLAN
+java.lang.IllegalStateException: Hazelcast Instance is not active!
+	at com.hazelcast.impl.FactoryImpl.initialChecks(FactoryImpl.java:711)
+	at com.hazelcast.impl.MProxyImpl.beforeCall(MProxyImpl.java:102)
+	at com.hazelcast.impl.MProxyImpl.access$000(MProxyImpl.java:49)
+	at com.hazelcast.impl.MProxyImpl$DynamicInvoker.invoke(MProxyImpl.java:64)
+	at com.sun.proxy.$Proxy488.localKeySet(Unknown Source)
+	at com.hazelcast.impl.MProxyImpl.localKeySet(MProxyImpl.java:340)
+	at org.alfresco.jlan.server.filesys.cache.hazelcast.HazelCastClusterFileStateCache.removeExpiredFileStates(HazelCastClusterFileStateCache.java:771)
+	at org.alfresco.jlan.server.filesys.cache.FileStateReaper.run(FileStateReaper.java:198)
+	at java.lang.Thread.run(Thread.java:745)
+2016-10-11 03:36:00,001 ERROR [org.quartz.core.JobRunShell] [DefaultScheduler_Worker-10] Job DEFAULT.feedGeneratorJobDetail threw an unhandled Exception: 
+org.alfresco.repo.security.permissions.AccessDeniedException: 09110009 Access Denied.  The system is currently in read-only mode.
+	at org.alfresco.repo.transaction.RetryingTransactionHelper.doInTransaction(RetryingTransactionHelper.java:404)
+	at org.alfresco.repo.activities.feed.AbstractFeedGenerator.execute(AbstractFeedGenerator.java:183)
+	at org.alfresco.repo.activities.feed.FeedGeneratorJob.execute(FeedGeneratorJob.java:57)
+	at org.quartz.core.JobRunShell.run(JobRunShell.java:216)
+	at org.quartz.simpl.SimpleThreadPool$WorkerThread.run(SimpleThreadPool.java:563)
+2016-10-11 03:36:00,003 ERROR [org.quartz.core.ErrorLogger] [DefaultScheduler_Worker-10] Job (DEFAULT.feedGeneratorJobDetail threw an exception.
+org.quartz.SchedulerException: Job threw an unhandled exception. [See nested exception: org.alfresco.repo.security.permissions.AccessDeniedException: 09110009 Access Denied.  The system is currently in read-only mode.]
+	at org.quartz.core.JobRunShell.run(JobRunShell.java:227)
+	at org.quartz.simpl.SimpleThreadPool$WorkerThread.run(SimpleThreadPool.java:563)
+Caused by: org.alfresco.repo.security.permissions.AccessDeniedException: 09110009 Access Denied.  The system is currently in read-only mode.
+	at org.alfresco.repo.transaction.RetryingTransactionHelper.doInTransaction(RetryingTransactionHelper.java:404)
+	at org.alfresco.repo.activities.feed.AbstractFeedGenerator.execute(AbstractFeedGenerator.java:183)
+	at org.alfresco.repo.activities.feed.FeedGeneratorJob.execute(FeedGeneratorJob.java:57)
+	at org.quartz.core.JobRunShell.run(JobRunShell.java:216)
+	... 1 more
+2016-10-11 03:36:01,692 ERROR [org.alfresco.fileserver] [FileStateReaper] Error from JLAN
+java.lang.IllegalStateException: Hazelcast Instance is not active!
+	at com.hazelcast.impl.FactoryImpl.initialChecks(FactoryImpl.java:711)
+	at com.hazelcast.impl.MProxyImpl.beforeCall(MProxyImpl.java:102)
+	at com.hazelcast.impl.MProxyImpl.access$000(MProxyImpl.java:49)
+	at com.hazelcast.impl.MProxyImpl$DynamicInvoker.invoke(MProxyImpl.java:64)
+	at com.sun.proxy.$Proxy488.localKeySet(Unknown Source)
+	at com.hazelcast.impl.MProxyImpl.localKeySet(MProxyImpl.java:340)
+	at org.alfresco.jlan.server.filesys.cache.hazelcast.HazelCastClusterFileStateCache.removeExpiredFileStates(HazelCastClusterFileStateCache.java:771)
+	at org.alfresco.jlan.server.filesys.cache.FileStateReaper.run(FileStateReaper.java:198)
+	at java.lang.Thread.run(Thread.java:745)
+2016-10-11 03:36:04,302 INFO  [org.alfresco.enterprise.repo.cluster.core.ClusteringBootstrap] [localhost-startStop-2] Clustering has shutdown.
+2016-10-11 03:36:04,417 WARN  [org.springframework.beans.factory.support.DisposableBeanAdapter] [localhost-startStop-2] Invocation of destroy method failed on bean with name 'serverConnector': java.lang.NullPointerException
+2016-10-11 03:36:04,448 INFO  [org.alfresco.repo.management.subsystems.ChildApplicationContextFactory] [localhost-startStop-2] Stopping 'Replication' subsystem, ID: [Replication, default]
+2016-10-11 03:36:04,449 INFO  [org.alfresco.repo.management.subsystems.ChildApplicationContextFactory] [localhost-startStop-2] Stopped 'Replication' subsystem, ID: [Replication, default]
+2016-10-11 03:36:04,496 INFO  [org.alfresco.repo.management.subsystems.ChildApplicationContextFactory] [localhost-startStop-2] Stopping 'Subscriptions' subsystem, ID: [Subscriptions, default]
+2016-10-11 03:36:04,496 INFO  [org.alfresco.repo.management.subsystems.ChildApplicationContextFactory] [localhost-startStop-2] Stopped 'Subscriptions' subsystem, ID: [Subscriptions, default]
+2016-10-11 03:36:04,497 INFO  [org.alfresco.repo.management.subsystems.ChildApplicationContextFactory] [localhost-startStop-2] Stopping 'email' subsystem, ID: [email, inbound]
+2016-10-11 03:36:04,497 INFO  [org.alfresco.repo.management.subsystems.ChildApplicationContextFactory] [localhost-startStop-2] Stopped 'email' subsystem, ID: [email, inbound]
+2016-10-11 03:36:04,497 INFO  [org.alfresco.repo.management.subsystems.ChildApplicationContextFactory] [localhost-startStop-2] Stopping 'fileServers' subsystem, ID: [fileServers, default]
+2016-10-11 03:36:04,499 INFO  [org.alfresco.repo.management.subsystems.ChildApplicationContextFactory] [localhost-startStop-2] Stopped 'fileServers' subsystem, ID: [fileServers, default]
+2016-10-11 03:36:04,500 INFO  [org.alfresco.repo.management.subsystems.ChildApplicationContextFactory] [localhost-startStop-2] Stopping 'OOoJodconverter' subsystem, ID: [OOoJodconverter, default]
+2016-10-11 03:36:04,500 INFO  [org.alfresco.repo.management.subsystems.ChildApplicationContextFactory] [localhost-startStop-2] Stopped 'OOoJodconverter' subsystem, ID: [OOoJodconverter, default]
+2016-10-11 03:36:04,506 INFO  [org.alfresco.repo.management.subsystems.ChildApplicationContextFactory] [localhost-startStop-2] Stopping 'ActivitiesFeed' subsystem, ID: [ActivitiesFeed, default]
+2016-10-11 03:36:04,511 INFO  [org.alfresco.repo.management.subsystems.ChildApplicationContextFactory] [localhost-startStop-2] Stopped 'ActivitiesFeed' subsystem, ID: [ActivitiesFeed, default]
+2016-10-11 03:36:04,512 WARN  [org.springframework.beans.factory.support.DisposableBeanAdapter] [localhost-startStop-2] Invocation of destroy method 'close' failed on bean with name 'solrSqlSessionTemplate': java.lang.UnsupportedOperationException: Manual close is not allowed over a Spring managed SqlSession
+2016-10-11 03:36:04,513 WARN  [org.springframework.beans.factory.support.DisposableBeanAdapter] [localhost-startStop-2] Invocation of destroy method 'close' failed on bean with name 'activitiesSqlSessionTemplate': java.lang.UnsupportedOperationException: Manual close is not allowed over a Spring managed SqlSession
+2016-10-11 03:36:04,514 INFO  [org.alfresco.repo.management.subsystems.ChildApplicationContextFactory] [localhost-startStop-2] Stopping 'OOoDirect' subsystem, ID: [OOoDirect, default]
+2016-10-11 03:36:04,515 INFO  [org.alfresco.repo.management.subsystems.ChildApplicationContextFactory] [localhost-startStop-2] Stopped 'OOoDirect' subsystem, ID: [OOoDirect, default]
+2016-10-11 03:36:04,515 INFO  [org.alfresco.repo.management.subsystems.ChildApplicationContextFactory] [localhost-startStop-2] Stopping 'ContentStore' subsystem, ID: [ContentStore, managed, unencrypted]
+2016-10-11 03:36:04,516 INFO  [org.alfresco.repo.management.subsystems.ChildApplicationContextFactory] [localhost-startStop-2] Stopped 'ContentStore' subsystem, ID: [ContentStore, managed, unencrypted]
+2016-10-11 03:36:04,517 INFO  [org.alfresco.repo.management.subsystems.ChildApplicationContextFactory] [localhost-startStop-2] Stopping 'Synchronization' subsystem, ID: [Synchronization, default]
+2016-10-11 03:36:04,518 INFO  [org.alfresco.repo.management.subsystems.ChildApplicationContextFactory] [localhost-startStop-2] Stopped 'Synchronization' subsystem, ID: [Synchronization, default]
+2016-10-11 03:36:04,528 INFO  [org.alfresco.repo.management.subsystems.ChildApplicationContextFactory] [localhost-startStop-2] Stopping 'email' subsystem, ID: [email, outbound]
+2016-10-11 03:36:04,529 INFO  [org.alfresco.repo.management.subsystems.ChildApplicationContextFactory] [localhost-startStop-2] Stopped 'email' subsystem, ID: [email, outbound]
+2016-10-11 03:36:04,539 INFO  [org.alfresco.repo.management.subsystems.ChildApplicationContextFactory] [localhost-startStop-2] Stopping 'imap' subsystem, ID: [imap, default]
+2016-10-11 03:36:04,578 INFO  [org.alfresco.repo.management.subsystems.ChildApplicationContextFactory] [localhost-startStop-2] Stopped 'imap' subsystem, ID: [imap, default]
+2016-10-11 03:36:05,072 INFO  [org.alfresco.repo.management.subsystems.ChildApplicationContextFactory] [localhost-startStop-2] Stopping 'Search' subsystem, ID: [Search, managed, solr4]
+2016-10-11 03:36:05,573 INFO  [org.alfresco.repo.management.subsystems.ChildApplicationContextFactory] [localhost-startStop-2] Stopped 'Search' subsystem, ID: [Search, managed, solr4]
+2016-10-11 03:36:05,653 DEBUG [org.alfrescouniversity.com.demoamp.DemoComponent] [localhost-startStop-2] preDeregister called.
+2016-10-11 03:36:05,653 DEBUG [org.alfrescouniversity.com.demoamp.DemoComponent] [localhost-startStop-2] postDeregister is called.
+2016-10-11 03:36:05,661 WARN  [org.springframework.beans.factory.support.DisposableBeanAdapter] [localhost-startStop-2] Invocation of destroy method 'close' failed on bean with name 'locksSqlSessionTemplate': java.lang.UnsupportedOperationException: Manual close is not allowed over a Spring managed SqlSession
+2016-10-11 03:36:05,661 WARN  [org.springframework.beans.factory.support.DisposableBeanAdapter] [localhost-startStop-2] Invocation of destroy method 'close' failed on bean with name 'authorizationSqlSessionTemplate': java.lang.UnsupportedOperationException: Manual close is not allowed over a Spring managed SqlSession
+2016-10-11 03:36:05,664 WARN  [org.springframework.beans.factory.support.DisposableBeanAdapter] [localhost-startStop-2] Invocation of destroy method 'close' failed on bean with name 'propertyValueSqlSessionTemplate': java.lang.UnsupportedOperationException: Manual close is not allowed over a Spring managed SqlSession
+2016-10-11 03:36:05,664 INFO  [org.alfresco.repo.management.subsystems.ChildApplicationContextFactory] [localhost-startStop-2] Stopping 'thirdparty' subsystem, ID: [thirdparty, default]
+2016-10-11 03:36:05,671 INFO  [org.alfresco.repo.management.subsystems.ChildApplicationContextFactory] [localhost-startStop-2] Stopped 'thirdparty' subsystem, ID: [thirdparty, default]
+2016-10-11 03:36:05,671 WARN  [org.springframework.beans.factory.support.DisposableBeanAdapter] [localhost-startStop-2] Invocation of destroy method 'close' failed on bean with name 'auditSqlSessionTemplate': java.lang.UnsupportedOperationException: Manual close is not allowed over a Spring managed SqlSession
+2016-10-11 03:36:05,672 INFO  [org.alfresco.repo.management.subsystems.ChildApplicationContextFactory] [localhost-startStop-2] Stopping 'Authentication' subsystem, ID: [Authentication, managed, alfrescoNtlm1]
+2016-10-11 03:36:05,673 INFO  [org.alfresco.repo.management.subsystems.ChildApplicationContextFactory] [localhost-startStop-2] Stopped 'Authentication' subsystem, ID: [Authentication, managed, alfrescoNtlm1]
+2016-10-11 03:36:05,673 INFO  [org.alfresco.repo.management.subsystems.ChildApplicationContextFactory] [localhost-startStop-2] Stopping 'sysAdmin' subsystem, ID: [sysAdmin, default]
+2016-10-11 03:36:05,673 INFO  [org.alfresco.repo.management.subsystems.ChildApplicationContextFactory] [localhost-startStop-2] Stopped 'sysAdmin' subsystem, ID: [sysAdmin, default]
+2016-10-11 03:36:05,674 WARN  [org.springframework.beans.factory.support.DisposableBeanAdapter] [localhost-startStop-2] Invocation of destroy method 'close' failed on bean with name 'contentSqlSessionTemplate': java.lang.UnsupportedOperationException: Manual close is not allowed over a Spring managed SqlSession
+2016-10-11 03:36:05,676 WARN  [org.springframework.beans.factory.support.DisposableBeanAdapter] [localhost-startStop-2] Invocation of destroy method 'close' failed on bean with name 'repoSqlSessionTemplate': java.lang.UnsupportedOperationException: Manual close is not allowed over a Spring managed SqlSession
+2016-10-11 03:40:12,344 INFO  [org.alfresco.repo.admin] [localhost-startStop-1] Using database URL 'jdbc:h2:/home/alfresco/activitiservicetasks/alf_data_dev/h2_data/alf_dev;AUTO_SERVER=TRUE;DB_CLOSE_ON_EXIT=FALSE;LOCK_TIMEOUT=10000;MVCC=FALSE;LOCK_MODE=0' with user 'alfresco'.
+2016-10-11 03:40:12,347 INFO  [org.alfresco.repo.admin] [localhost-startStop-1] Connected to database H2 version 1.4.190 (2015-10-11)
+2016-10-11 03:40:16,821 INFO  [org.alfresco.repo.domain.schema.SchemaBootstrap] [localhost-startStop-1] Ignoring script patch (post-Hibernate): patch.db-V4.2-metadata-query-indexes
+2016-10-11 03:40:16,822 INFO  [org.alfresco.repo.domain.schema.SchemaBootstrap] [localhost-startStop-1] Ignoring script patch (post-Hibernate): patch.db-V5.1-metadata-query-indexes
+2016-10-11 03:40:23,073 INFO  [org.alfresco.repo.management.subsystems.ChildApplicationContextFactory] [localhost-startStop-1] Starting 'Authentication' subsystem, ID: [Authentication, managed, alfrescoNtlm1]
+2016-10-11 03:40:23,264 INFO  [org.alfresco.repo.management.subsystems.ChildApplicationContextFactory] [localhost-startStop-1] Startup of 'Authentication' subsystem, ID: [Authentication, managed, alfrescoNtlm1] complete
+2016-10-11 03:40:26,123 INFO  [org.alfresco.repo.management.subsystems.ChildApplicationContextFactory] [localhost-startStop-1] Starting 'sysAdmin' subsystem, ID: [sysAdmin, default]
+2016-10-11 03:40:26,148 INFO  [org.alfresco.repo.management.subsystems.ChildApplicationContextFactory] [localhost-startStop-1] Startup of 'sysAdmin' subsystem, ID: [sysAdmin, default] complete
+2016-10-11 03:40:26,877 INFO  [org.springframework.extensions.webscripts.TemplateProcessorRegistry] [localhost-startStop-1] Registered template processor Repository Template Processor for extension ftl
+2016-10-11 03:40:26,881 INFO  [org.springframework.extensions.webscripts.ScriptProcessorRegistry] [localhost-startStop-1] Registered script processor Repository Script Processor for extension js
+2016-10-11 03:40:30,599 INFO  [org.alfresco.repo.management.subsystems.ChildApplicationContextFactory] [localhost-startStop-1] Starting 'ContentStore' subsystem, ID: [ContentStore, managed, unencrypted]
+2016-10-11 03:40:30,631 INFO  [org.alfresco.repo.management.subsystems.ChildApplicationContextFactory] [localhost-startStop-1] Startup of 'ContentStore' subsystem, ID: [ContentStore, managed, unencrypted] complete
+2016-10-11 03:40:30,652 INFO  [org.alfresco.repo.domain.schema.SchemaBootstrap] [localhost-startStop-1] Connecting to database: jdbc:h2:/home/alfresco/activitiservicetasks/alf_data_dev/h2_data/alf_dev, UserName=ALFRESCO, H2 JDBC Driver
+2016-10-11 03:40:30,652 INFO  [org.alfresco.repo.domain.schema.SchemaBootstrap] [localhost-startStop-1] Schema managed by database dialect org.hibernate.dialect.H2Dialect.
+2016-10-11 03:40:30,928 INFO  [org.alfresco.repo.domain.schema.SchemaBootstrap] [localhost-startStop-1] No changes were made to the schema.
+2016-10-11 03:40:31,054 DEBUG [org.alfrescouniversity.com.demoamp.DemoComponent] [localhost-startStop-1] preRegister called. Server=com.sun.jmx.mbeanserver.JmxMBeanServer@61236349, name=log4j:logger=org.alfrescouniversity.com.demoamp.DemoComponent
+2016-10-11 03:40:32,153 INFO  [org.alfresco.enterprise.repo.sync.SyncAdminServiceImpl] [localhost-startStop-1] A key is provided for cloud sync
+2016-10-11 03:40:32,166 INFO  [org.alfresco.repo.management.subsystems.ChildApplicationContextFactory] [localhost-startStop-1] Starting 'thirdparty' subsystem, ID: [thirdparty, default]
+2016-10-11 03:40:32,224 ERROR [org.alfresco.repo.content.transform.magick.AbstractImageMagickContentTransformerWorker] [localhost-startStop-1] ImageMagickContentTransformerWorker not available: 09110001 Failed to perform ImageMagick transformation: 
+Execution result: 
+   os:         Linux
+   command:    ./ImageMagick/bin/convert /tmp/Alfresco/ImageMagickContentTransformerWorker_init_source_213409639099009180.gif /tmp/Alfresco/ImageMagickContentTransformerWorker_init_target_5782434813408625925.png
+   succeeded:  false
+   exit code:  1
+   out:        
+   err:        Cannot run program "./ImageMagick/bin/convert": error=2, No such file or directory
+2016-10-11 03:40:32,224 INFO  [org.alfresco.repo.management.subsystems.ChildApplicationContextFactory] [localhost-startStop-1] Startup of 'thirdparty' subsystem, ID: [thirdparty, default] complete
+2016-10-11 03:40:32,224 INFO  [org.alfresco.repo.management.subsystems.ChildApplicationContextFactory] [localhost-startStop-1] Starting 'OOoDirect' subsystem, ID: [OOoDirect, default]
+2016-10-11 03:40:32,270 INFO  [org.alfresco.repo.management.subsystems.ChildApplicationContextFactory] [localhost-startStop-1] Starting 'OOoJodconverter' subsystem, ID: [OOoJodconverter, default]
+2016-10-11 03:40:32,439 INFO  [org.alfresco.repo.management.subsystems.ChildApplicationContextFactory] [localhost-startStop-1] Startup of 'OOoJodconverter' subsystem, ID: [OOoJodconverter, default] complete
+2016-10-11 03:40:32,496 ERROR [org.alfresco.util.exec.RuntimeExecBootstrapBean] [localhost-startStop-1] Bootstrap command failed: 
+Execution result: 
+   os:         Linux
+   command:    soffice -accept=socket,host=127.0.0.1,port=8100;urp;StarOffice.ServiceManager -env:UserInstallation=file:///home/alfresco/activitiservicetasks/alf_data_dev/oouser -headless -nocrashreport -nofirststartwizard -nologo -norestore
+   succeeded:  false
+   exit code:  2
+   out:        
+   err:        Cannot run program "soffice": error=2, No such file or directory
+2016-10-11 03:40:32,537 WARN  [org.alfresco.util.OpenOfficeConnectionTester] [localhost-startStop-1] An initial OpenOffice connection could not be established.
+2016-10-11 03:40:32,539 INFO  [org.alfresco.repo.management.subsystems.ChildApplicationContextFactory] [localhost-startStop-1] Startup of 'OOoDirect' subsystem, ID: [OOoDirect, default] complete
+2016-10-11 03:40:37,248 INFO  [org.alfresco.enterprise.repo.cluster.core.ClusteringBootstrap] [localhost-startStop-1] Cluster started, name: MainRepository-1976cd82-011a-45da-ac06-1b773c9aa09c
+2016-10-11 03:40:37,249 INFO  [org.alfresco.enterprise.repo.cluster.core.ClusteringBootstrap] [localhost-startStop-1] Current cluster members:
+  10.0.0.3:5701 (hostname: host-1)
+
+2016-10-11 03:40:37,251 INFO  [org.alfresco.repo.admin.ConfigurationChecker] [localhost-startStop-1] The Alfresco root data directory ('dir.root') is: /home/alfresco/activitiservicetasks/alf_data_dev
+2016-10-11 03:40:37,251 INFO  [org.alfresco.repo.management.subsystems.ChildApplicationContextFactory] [localhost-startStop-1] Starting 'Search' subsystem, ID: [Search, managed, solr4]
+2016-10-11 03:40:37,599 INFO  [org.alfresco.repo.management.subsystems.ChildApplicationContextFactory] [localhost-startStop-1] Startup of 'Search' subsystem, ID: [Search, managed, solr4] complete
+2016-10-11 03:40:37,610 INFO  [org.alfresco.repo.admin.patch.PatchExecuter] [localhost-startStop-1] Checking for patches to apply ...
+2016-10-11 03:40:37,795 INFO  [org.alfresco.repo.admin.patch.PatchExecuter] [localhost-startStop-1] No patches were required.
+2016-10-11 03:40:37,811 INFO  [org.alfresco.repo.module.ModuleServiceImpl] [localhost-startStop-1] Found 2 module package(s).
+2016-10-11 03:40:37,828 INFO  [org.alfresco.repo.module.ModuleServiceImpl] [localhost-startStop-1] Starting module 'activitiservicetasks-repo-amp' version 1.0-SNAPSHOT.
+2016-10-11 03:40:37,838 INFO  [org.alfresco.repo.module.ModuleServiceImpl] [localhost-startStop-1] Starting module 'alfresco-share-services' version 5.1.1.
+2016-10-11 03:40:37,844 INFO  [org.alfresco.repo.management.subsystems.ChildApplicationContextFactory] [localhost-startStop-1] Starting 'fileServers' subsystem, ID: [fileServers, default]
+2016-10-11 03:40:38,292 INFO  [org.alfresco.repo.management.subsystems.ChildApplicationContextFactory] [localhost-startStop-1] Startup of 'fileServers' subsystem, ID: [fileServers, default] complete
+2016-10-11 03:40:38,292 INFO  [org.alfresco.repo.management.subsystems.ChildApplicationContextFactory] [localhost-startStop-1] Starting 'imap' subsystem, ID: [imap, default]
+2016-10-11 03:40:38,394 INFO  [org.alfresco.repo.management.subsystems.ChildApplicationContextFactory] [localhost-startStop-1] Startup of 'imap' subsystem, ID: [imap, default] complete
+2016-10-11 03:40:38,394 INFO  [org.alfresco.repo.management.subsystems.ChildApplicationContextFactory] [localhost-startStop-1] Starting 'email' subsystem, ID: [email, outbound]
+2016-10-11 03:40:38,783 INFO  [org.alfresco.repo.management.subsystems.ChildApplicationContextFactory] [localhost-startStop-1] Startup of 'email' subsystem, ID: [email, outbound] complete
+2016-10-11 03:40:38,783 INFO  [org.alfresco.repo.management.subsystems.ChildApplicationContextFactory] [localhost-startStop-1] Starting 'email' subsystem, ID: [email, inbound]
+2016-10-11 03:40:38,895 INFO  [org.alfresco.repo.management.subsystems.ChildApplicationContextFactory] [localhost-startStop-1] Startup of 'email' subsystem, ID: [email, inbound] complete
+2016-10-11 03:40:38,895 INFO  [org.alfresco.repo.management.subsystems.ChildApplicationContextFactory] [localhost-startStop-1] Starting 'Subscriptions' subsystem, ID: [Subscriptions, default]
+2016-10-11 03:40:38,917 INFO  [org.alfresco.repo.management.subsystems.ChildApplicationContextFactory] [localhost-startStop-1] Startup of 'Subscriptions' subsystem, ID: [Subscriptions, default] complete
+2016-10-11 03:40:38,933 INFO  [org.alfresco.repo.management.subsystems.ChildApplicationContextFactory] [localhost-startStop-1] Starting 'Synchronization' subsystem, ID: [Synchronization, default]
+2016-10-11 03:40:39,026 INFO  [org.alfresco.repo.management.subsystems.ChildApplicationContextFactory] [localhost-startStop-1] Startup of 'Synchronization' subsystem, ID: [Synchronization, default] complete
+2016-10-11 03:40:39,040 INFO  [org.alfresco.service.descriptor.DescriptorService] [localhost-startStop-1] Alfresco JVM - v1.8.0_101-b13; maximum heap size 910.500MB
+2016-10-11 03:40:39,041 INFO  [org.alfresco.service.descriptor.DescriptorService] [localhost-startStop-1] Alfresco license: Mode ENTERPRISE, cluster:enabled granted to Alfresco Technical Training Team limited to 731 days expiring Sat Jan 13 16:00:00 PST 2018 (459 days remaining).
+2016-10-11 03:40:39,041 INFO  [org.alfresco.service.descriptor.DescriptorService] [localhost-startStop-1] Server Mode :UNKNOWN
+2016-10-11 03:40:39,044 INFO  [org.alfresco.service.descriptor.DescriptorService] [localhost-startStop-1] Alfresco started (Enterprise). Current version: 5.1.1 (r128754-b138) schema 9,031. Originally installed version: 5.1.1 (r128754-b138) schema 9,031.
+2016-10-11 03:40:39,052 INFO  [org.alfresco.repo.management.subsystems.ChildApplicationContextFactory] [localhost-startStop-1] Starting 'ActivitiesFeed' subsystem, ID: [ActivitiesFeed, default]
+2016-10-11 03:40:39,278 INFO  [org.alfresco.repo.management.subsystems.ChildApplicationContextFactory] [localhost-startStop-1] Startup of 'ActivitiesFeed' subsystem, ID: [ActivitiesFeed, default] complete
+2016-10-11 03:40:39,312 INFO  [org.alfresco.enterprise.repo.authorization.AuthorizationService] [localhost-startStop-1] Preauthorized user: admin
+2016-10-11 03:40:39,315 INFO  [org.alfresco.repo.management.subsystems.ChildApplicationContextFactory] [localhost-startStop-1] Starting 'Replication' subsystem, ID: [Replication, default]
+2016-10-11 03:40:39,335 INFO  [org.alfresco.repo.management.subsystems.ChildApplicationContextFactory] [localhost-startStop-1] Startup of 'Replication' subsystem, ID: [Replication, default] complete
+2016-10-11 03:40:45,991 INFO  [org.springframework.extensions.webscripts.DeclarativeRegistry] [asynchronouslyRefreshedCacheThreadPool1] Registered 491 Web Scripts (+0 failed), 653 URLs
+2016-10-11 03:40:45,993 INFO  [org.springframework.extensions.webscripts.DeclarativeRegistry] [asynchronouslyRefreshedCacheThreadPool1] Registered 1 Package Description Documents (+0 failed) 
+2016-10-11 03:40:45,993 INFO  [org.springframework.extensions.webscripts.DeclarativeRegistry] [asynchronouslyRefreshedCacheThreadPool1] Registered 0 Schema Description Documents (+0 failed) 
+2016-10-11 03:40:48,956 INFO  [org.springframework.extensions.webscripts.DeclarativeRegistry] [localhost-startStop-1] Registered 491 Web Scripts (+0 failed), 653 URLs
+2016-10-11 03:40:48,956 INFO  [org.springframework.extensions.webscripts.DeclarativeRegistry] [localhost-startStop-1] Registered 1 Package Description Documents (+0 failed) 
+2016-10-11 03:40:48,956 INFO  [org.springframework.extensions.webscripts.DeclarativeRegistry] [localhost-startStop-1] Registered 0 Schema Description Documents (+0 failed) 
+2016-10-11 03:40:48,959 INFO  [org.springframework.extensions.webscripts.AbstractRuntimeContainer] [localhost-startStop-1] Initialised Repository Web Script Container (in 7882.254ms)
+2016-10-11 03:40:48,981 INFO  [org.springframework.extensions.webscripts.TemplateProcessorRegistry] [localhost-startStop-1] Registered template processor freemarker for extension ftl
+2016-10-11 03:40:48,984 INFO  [org.springframework.extensions.webscripts.ScriptProcessorRegistry] [localhost-startStop-1] Registered script processor javascript for extension js
+2016-10-11 03:40:51,598 INFO  [org.springframework.extensions.webscripts.DeclarativeRegistry] [asynchronouslyRefreshedCacheThreadPool1] Registered 491 Web Scripts (+0 failed), 653 URLs
+2016-10-11 03:40:51,598 INFO  [org.springframework.extensions.webscripts.DeclarativeRegistry] [asynchronouslyRefreshedCacheThreadPool1] Registered 1 Package Description Documents (+0 failed) 
+2016-10-11 03:40:51,598 INFO  [org.springframework.extensions.webscripts.DeclarativeRegistry] [asynchronouslyRefreshedCacheThreadPool1] Registered 0 Schema Description Documents (+0 failed) 
+2016-10-11 03:40:51,688 INFO  [org.springframework.extensions.webscripts.DeclarativeRegistry] [asynchronouslyRefreshedCacheThreadPool1] Registered 11 Web Scripts (+0 failed), 82 URLs
+2016-10-11 03:40:51,689 INFO  [org.springframework.extensions.webscripts.DeclarativeRegistry] [asynchronouslyRefreshedCacheThreadPool1] Registered 0 Package Description Documents (+0 failed) 
+2016-10-11 03:40:51,689 INFO  [org.springframework.extensions.webscripts.DeclarativeRegistry] [asynchronouslyRefreshedCacheThreadPool1] Registered 0 Schema Description Documents (+0 failed) 
+2016-10-11 03:40:51,769 INFO  [org.springframework.extensions.webscripts.DeclarativeRegistry] [localhost-startStop-1] Registered 11 Web Scripts (+0 failed), 82 URLs
+2016-10-11 03:40:51,769 INFO  [org.springframework.extensions.webscripts.DeclarativeRegistry] [localhost-startStop-1] Registered 0 Package Description Documents (+0 failed) 
+2016-10-11 03:40:51,769 INFO  [org.springframework.extensions.webscripts.DeclarativeRegistry] [localhost-startStop-1] Registered 0 Schema Description Documents (+0 failed) 
+2016-10-11 03:40:51,771 INFO  [org.springframework.extensions.webscripts.AbstractRuntimeContainer] [localhost-startStop-1] Initialised Public Api Web Script Container (in 2652.5303ms)
+2016-10-11 03:40:51,809 INFO  [org.springframework.extensions.webscripts.DeclarativeRegistry] [asynchronouslyRefreshedCacheThreadPool1] Registered 11 Web Scripts (+0 failed), 82 URLs
+2016-10-11 03:40:51,809 INFO  [org.springframework.extensions.webscripts.DeclarativeRegistry] [asynchronouslyRefreshedCacheThreadPool1] Registered 0 Package Description Documents (+0 failed) 
+2016-10-11 03:40:51,809 INFO  [org.springframework.extensions.webscripts.DeclarativeRegistry] [asynchronouslyRefreshedCacheThreadPool1] Registered 0 Schema Description Documents (+0 failed) 
+2016-10-11 06:23:29,798 ERROR [org.alfresco.fileserver] [FileStateReaper] Error from JLAN
+java.lang.IllegalStateException: Hazelcast Instance is not active!
+	at com.hazelcast.impl.FactoryImpl.initialChecks(FactoryImpl.java:711)
+	at com.hazelcast.impl.MProxyImpl.beforeCall(MProxyImpl.java:102)
+	at com.hazelcast.impl.MProxyImpl.access$000(MProxyImpl.java:49)
+	at com.hazelcast.impl.MProxyImpl$DynamicInvoker.invoke(MProxyImpl.java:64)
+	at com.sun.proxy.$Proxy488.localKeySet(Unknown Source)
+	at com.hazelcast.impl.MProxyImpl.localKeySet(MProxyImpl.java:340)
+	at org.alfresco.jlan.server.filesys.cache.hazelcast.HazelCastClusterFileStateCache.removeExpiredFileStates(HazelCastClusterFileStateCache.java:771)
+	at org.alfresco.jlan.server.filesys.cache.FileStateReaper.run(FileStateReaper.java:198)
+	at java.lang.Thread.run(Thread.java:745)
+2016-10-11 06:23:30,001 ERROR [org.quartz.core.JobRunShell] [DefaultScheduler_Worker-1] Job DEFAULT.feedGeneratorJobDetail threw an unhandled Exception: 
+org.alfresco.repo.security.permissions.AccessDeniedException: 09110004 Access Denied.  The system is currently in read-only mode.
+	at org.alfresco.repo.transaction.RetryingTransactionHelper.doInTransaction(RetryingTransactionHelper.java:404)
+	at org.alfresco.repo.activities.feed.AbstractFeedGenerator.execute(AbstractFeedGenerator.java:183)
+	at org.alfresco.repo.activities.feed.FeedGeneratorJob.execute(FeedGeneratorJob.java:57)
+	at org.quartz.core.JobRunShell.run(JobRunShell.java:216)
+	at org.quartz.simpl.SimpleThreadPool$WorkerThread.run(SimpleThreadPool.java:563)
+2016-10-11 06:23:30,001 ERROR [org.quartz.core.ErrorLogger] [DefaultScheduler_Worker-1] Job (DEFAULT.feedGeneratorJobDetail threw an exception.
+org.quartz.SchedulerException: Job threw an unhandled exception. [See nested exception: org.alfresco.repo.security.permissions.AccessDeniedException: 09110004 Access Denied.  The system is currently in read-only mode.]
+	at org.quartz.core.JobRunShell.run(JobRunShell.java:227)
+	at org.quartz.simpl.SimpleThreadPool$WorkerThread.run(SimpleThreadPool.java:563)
+Caused by: org.alfresco.repo.security.permissions.AccessDeniedException: 09110004 Access Denied.  The system is currently in read-only mode.
+	at org.alfresco.repo.transaction.RetryingTransactionHelper.doInTransaction(RetryingTransactionHelper.java:404)
+	at org.alfresco.repo.activities.feed.AbstractFeedGenerator.execute(AbstractFeedGenerator.java:183)
+	at org.alfresco.repo.activities.feed.FeedGeneratorJob.execute(FeedGeneratorJob.java:57)
+	at org.quartz.core.JobRunShell.run(JobRunShell.java:216)
+	... 1 more
+2016-10-11 06:23:44,801 ERROR [org.alfresco.fileserver] [FileStateReaper] Error from JLAN
+java.lang.IllegalStateException: Hazelcast Instance is not active!
+	at com.hazelcast.impl.FactoryImpl.initialChecks(FactoryImpl.java:711)
+	at com.hazelcast.impl.MProxyImpl.beforeCall(MProxyImpl.java:102)
+	at com.hazelcast.impl.MProxyImpl.access$000(MProxyImpl.java:49)
+	at com.hazelcast.impl.MProxyImpl$DynamicInvoker.invoke(MProxyImpl.java:64)
+	at com.sun.proxy.$Proxy488.localKeySet(Unknown Source)
+	at com.hazelcast.impl.MProxyImpl.localKeySet(MProxyImpl.java:340)
+	at org.alfresco.jlan.server.filesys.cache.hazelcast.HazelCastClusterFileStateCache.removeExpiredFileStates(HazelCastClusterFileStateCache.java:771)
+	at org.alfresco.jlan.server.filesys.cache.FileStateReaper.run(FileStateReaper.java:198)
+	at java.lang.Thread.run(Thread.java:745)
+2016-10-11 06:23:59,806 ERROR [org.alfresco.fileserver] [FileStateReaper] Error from JLAN
+java.lang.IllegalStateException: Hazelcast Instance is not active!
+	at com.hazelcast.impl.FactoryImpl.initialChecks(FactoryImpl.java:711)
+	at com.hazelcast.impl.MProxyImpl.beforeCall(MProxyImpl.java:102)
+	at com.hazelcast.impl.MProxyImpl.access$000(MProxyImpl.java:49)
+	at com.hazelcast.impl.MProxyImpl$DynamicInvoker.invoke(MProxyImpl.java:64)
+	at com.sun.proxy.$Proxy488.localKeySet(Unknown Source)
+	at com.hazelcast.impl.MProxyImpl.localKeySet(MProxyImpl.java:340)
+	at org.alfresco.jlan.server.filesys.cache.hazelcast.HazelCastClusterFileStateCache.removeExpiredFileStates(HazelCastClusterFileStateCache.java:771)
+	at org.alfresco.jlan.server.filesys.cache.FileStateReaper.run(FileStateReaper.java:198)
+	at java.lang.Thread.run(Thread.java:745)
+2016-10-11 06:24:00,001 ERROR [org.quartz.core.JobRunShell] [DefaultScheduler_Worker-4] Job DEFAULT.feedGeneratorJobDetail threw an unhandled Exception: 
+org.alfresco.repo.security.permissions.AccessDeniedException: 09110005 Access Denied.  The system is currently in read-only mode.
+	at org.alfresco.repo.transaction.RetryingTransactionHelper.doInTransaction(RetryingTransactionHelper.java:404)
+	at org.alfresco.repo.activities.feed.AbstractFeedGenerator.execute(AbstractFeedGenerator.java:183)
+	at org.alfresco.repo.activities.feed.FeedGeneratorJob.execute(FeedGeneratorJob.java:57)
+	at org.quartz.core.JobRunShell.run(JobRunShell.java:216)
+	at org.quartz.simpl.SimpleThreadPool$WorkerThread.run(SimpleThreadPool.java:563)
+2016-10-11 06:24:00,002 ERROR [org.quartz.core.ErrorLogger] [DefaultScheduler_Worker-4] Job (DEFAULT.feedGeneratorJobDetail threw an exception.
+org.quartz.SchedulerException: Job threw an unhandled exception. [See nested exception: org.alfresco.repo.security.permissions.AccessDeniedException: 09110005 Access Denied.  The system is currently in read-only mode.]
+	at org.quartz.core.JobRunShell.run(JobRunShell.java:227)
+	at org.quartz.simpl.SimpleThreadPool$WorkerThread.run(SimpleThreadPool.java:563)
+Caused by: org.alfresco.repo.security.permissions.AccessDeniedException: 09110005 Access Denied.  The system is currently in read-only mode.
+	at org.alfresco.repo.transaction.RetryingTransactionHelper.doInTransaction(RetryingTransactionHelper.java:404)
+	at org.alfresco.repo.activities.feed.AbstractFeedGenerator.execute(AbstractFeedGenerator.java:183)
+	at org.alfresco.repo.activities.feed.FeedGeneratorJob.execute(FeedGeneratorJob.java:57)
+	at org.quartz.core.JobRunShell.run(JobRunShell.java:216)
+	... 1 more
+2016-10-11 06:24:12,235 INFO  [org.alfresco.enterprise.repo.cluster.core.ClusteringBootstrap] [localhost-startStop-2] Clustering has shutdown.
+2016-10-11 06:24:12,340 WARN  [org.springframework.beans.factory.support.DisposableBeanAdapter] [localhost-startStop-2] Invocation of destroy method failed on bean with name 'serverConnector': java.lang.NullPointerException
+2016-10-11 06:24:12,374 INFO  [org.alfresco.repo.management.subsystems.ChildApplicationContextFactory] [localhost-startStop-2] Stopping 'Replication' subsystem, ID: [Replication, default]
+2016-10-11 06:24:12,375 INFO  [org.alfresco.repo.management.subsystems.ChildApplicationContextFactory] [localhost-startStop-2] Stopped 'Replication' subsystem, ID: [Replication, default]
+2016-10-11 06:24:12,413 INFO  [org.alfresco.repo.management.subsystems.ChildApplicationContextFactory] [localhost-startStop-2] Stopping 'Subscriptions' subsystem, ID: [Subscriptions, default]
+2016-10-11 06:24:12,413 INFO  [org.alfresco.repo.management.subsystems.ChildApplicationContextFactory] [localhost-startStop-2] Stopped 'Subscriptions' subsystem, ID: [Subscriptions, default]
+2016-10-11 06:24:12,413 INFO  [org.alfresco.repo.management.subsystems.ChildApplicationContextFactory] [localhost-startStop-2] Stopping 'email' subsystem, ID: [email, inbound]
+2016-10-11 06:24:12,413 INFO  [org.alfresco.repo.management.subsystems.ChildApplicationContextFactory] [localhost-startStop-2] Stopped 'email' subsystem, ID: [email, inbound]
+2016-10-11 06:24:12,413 INFO  [org.alfresco.repo.management.subsystems.ChildApplicationContextFactory] [localhost-startStop-2] Stopping 'fileServers' subsystem, ID: [fileServers, default]
+2016-10-11 06:24:12,414 INFO  [org.alfresco.repo.management.subsystems.ChildApplicationContextFactory] [localhost-startStop-2] Stopped 'fileServers' subsystem, ID: [fileServers, default]
+2016-10-11 06:24:12,415 INFO  [org.alfresco.repo.management.subsystems.ChildApplicationContextFactory] [localhost-startStop-2] Stopping 'OOoJodconverter' subsystem, ID: [OOoJodconverter, default]
+2016-10-11 06:24:12,416 INFO  [org.alfresco.repo.management.subsystems.ChildApplicationContextFactory] [localhost-startStop-2] Stopped 'OOoJodconverter' subsystem, ID: [OOoJodconverter, default]
+2016-10-11 06:24:12,421 INFO  [org.alfresco.repo.management.subsystems.ChildApplicationContextFactory] [localhost-startStop-2] Stopping 'ActivitiesFeed' subsystem, ID: [ActivitiesFeed, default]
+2016-10-11 06:24:12,422 INFO  [org.alfresco.repo.management.subsystems.ChildApplicationContextFactory] [localhost-startStop-2] Stopped 'ActivitiesFeed' subsystem, ID: [ActivitiesFeed, default]
+2016-10-11 06:24:12,423 WARN  [org.springframework.beans.factory.support.DisposableBeanAdapter] [localhost-startStop-2] Invocation of destroy method 'close' failed on bean with name 'solrSqlSessionTemplate': java.lang.UnsupportedOperationException: Manual close is not allowed over a Spring managed SqlSession
+2016-10-11 06:24:12,423 WARN  [org.springframework.beans.factory.support.DisposableBeanAdapter] [localhost-startStop-2] Invocation of destroy method 'close' failed on bean with name 'activitiesSqlSessionTemplate': java.lang.UnsupportedOperationException: Manual close is not allowed over a Spring managed SqlSession
+2016-10-11 06:24:12,425 INFO  [org.alfresco.repo.management.subsystems.ChildApplicationContextFactory] [localhost-startStop-2] Stopping 'OOoDirect' subsystem, ID: [OOoDirect, default]
+2016-10-11 06:24:12,425 INFO  [org.alfresco.repo.management.subsystems.ChildApplicationContextFactory] [localhost-startStop-2] Stopped 'OOoDirect' subsystem, ID: [OOoDirect, default]
+2016-10-11 06:24:12,426 INFO  [org.alfresco.repo.management.subsystems.ChildApplicationContextFactory] [localhost-startStop-2] Stopping 'ContentStore' subsystem, ID: [ContentStore, managed, unencrypted]
+2016-10-11 06:24:12,426 INFO  [org.alfresco.repo.management.subsystems.ChildApplicationContextFactory] [localhost-startStop-2] Stopped 'ContentStore' subsystem, ID: [ContentStore, managed, unencrypted]
+2016-10-11 06:24:12,427 INFO  [org.alfresco.repo.management.subsystems.ChildApplicationContextFactory] [localhost-startStop-2] Stopping 'Synchronization' subsystem, ID: [Synchronization, default]
+2016-10-11 06:24:12,427 INFO  [org.alfresco.repo.management.subsystems.ChildApplicationContextFactory] [localhost-startStop-2] Stopped 'Synchronization' subsystem, ID: [Synchronization, default]
+2016-10-11 06:24:12,438 INFO  [org.alfresco.repo.management.subsystems.ChildApplicationContextFactory] [localhost-startStop-2] Stopping 'email' subsystem, ID: [email, outbound]
+2016-10-11 06:24:12,438 INFO  [org.alfresco.repo.management.subsystems.ChildApplicationContextFactory] [localhost-startStop-2] Stopped 'email' subsystem, ID: [email, outbound]
+2016-10-11 06:24:12,448 INFO  [org.alfresco.repo.management.subsystems.ChildApplicationContextFactory] [localhost-startStop-2] Stopping 'imap' subsystem, ID: [imap, default]
+2016-10-11 06:24:12,450 INFO  [org.alfresco.repo.management.subsystems.ChildApplicationContextFactory] [localhost-startStop-2] Stopped 'imap' subsystem, ID: [imap, default]
+2016-10-11 06:24:12,571 INFO  [org.alfresco.repo.management.subsystems.ChildApplicationContextFactory] [localhost-startStop-2] Stopping 'Search' subsystem, ID: [Search, managed, solr4]
+2016-10-11 06:24:13,031 INFO  [org.alfresco.repo.management.subsystems.ChildApplicationContextFactory] [localhost-startStop-2] Stopped 'Search' subsystem, ID: [Search, managed, solr4]
+2016-10-11 06:24:13,105 DEBUG [org.alfrescouniversity.com.demoamp.DemoComponent] [localhost-startStop-2] preDeregister called.
+2016-10-11 06:24:13,106 DEBUG [org.alfrescouniversity.com.demoamp.DemoComponent] [localhost-startStop-2] postDeregister is called.
+2016-10-11 06:24:13,114 WARN  [org.springframework.beans.factory.support.DisposableBeanAdapter] [localhost-startStop-2] Invocation of destroy method 'close' failed on bean with name 'locksSqlSessionTemplate': java.lang.UnsupportedOperationException: Manual close is not allowed over a Spring managed SqlSession
+2016-10-11 06:24:13,115 WARN  [org.springframework.beans.factory.support.DisposableBeanAdapter] [localhost-startStop-2] Invocation of destroy method 'close' failed on bean with name 'authorizationSqlSessionTemplate': java.lang.UnsupportedOperationException: Manual close is not allowed over a Spring managed SqlSession
+2016-10-11 06:24:13,119 WARN  [org.springframework.beans.factory.support.DisposableBeanAdapter] [localhost-startStop-2] Invocation of destroy method 'close' failed on bean with name 'propertyValueSqlSessionTemplate': java.lang.UnsupportedOperationException: Manual close is not allowed over a Spring managed SqlSession
+2016-10-11 06:24:13,119 INFO  [org.alfresco.repo.management.subsystems.ChildApplicationContextFactory] [localhost-startStop-2] Stopping 'thirdparty' subsystem, ID: [thirdparty, default]
+2016-10-11 06:24:13,120 INFO  [org.alfresco.repo.management.subsystems.ChildApplicationContextFactory] [localhost-startStop-2] Stopped 'thirdparty' subsystem, ID: [thirdparty, default]
+2016-10-11 06:24:13,121 WARN  [org.springframework.beans.factory.support.DisposableBeanAdapter] [localhost-startStop-2] Invocation of destroy method 'close' failed on bean with name 'auditSqlSessionTemplate': java.lang.UnsupportedOperationException: Manual close is not allowed over a Spring managed SqlSession
+2016-10-11 06:24:13,122 INFO  [org.alfresco.repo.management.subsystems.ChildApplicationContextFactory] [localhost-startStop-2] Stopping 'Authentication' subsystem, ID: [Authentication, managed, alfrescoNtlm1]
+2016-10-11 06:24:13,122 INFO  [org.alfresco.repo.management.subsystems.ChildApplicationContextFactory] [localhost-startStop-2] Stopped 'Authentication' subsystem, ID: [Authentication, managed, alfrescoNtlm1]
+2016-10-11 06:24:13,123 INFO  [org.alfresco.repo.management.subsystems.ChildApplicationContextFactory] [localhost-startStop-2] Stopping 'sysAdmin' subsystem, ID: [sysAdmin, default]
+2016-10-11 06:24:13,123 INFO  [org.alfresco.repo.management.subsystems.ChildApplicationContextFactory] [localhost-startStop-2] Stopped 'sysAdmin' subsystem, ID: [sysAdmin, default]
+2016-10-11 06:24:13,124 WARN  [org.springframework.beans.factory.support.DisposableBeanAdapter] [localhost-startStop-2] Invocation of destroy method 'close' failed on bean with name 'contentSqlSessionTemplate': java.lang.UnsupportedOperationException: Manual close is not allowed over a Spring managed SqlSession
+2016-10-11 06:24:13,126 WARN  [org.springframework.beans.factory.support.DisposableBeanAdapter] [localhost-startStop-2] Invocation of destroy method 'close' failed on bean with name 'repoSqlSessionTemplate': java.lang.UnsupportedOperationException: Manual close is not allowed over a Spring managed SqlSession

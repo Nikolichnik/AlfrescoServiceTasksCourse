@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/activiti-app/activiti-app.iml" filepath="$PROJECT_DIR$/activiti-app/activiti-app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/activiti-extension-module/activiti-extension-module.iml" filepath="$PROJECT_DIR$/activiti-extension-module/activiti-extension-module.iml" />
+      <module fileurl="file://$PROJECT_DIR$/activitiservicetasks.iml" filepath="$PROJECT_DIR$/activitiservicetasks.iml" />
+      <module fileurl="file://$PROJECT_DIR$/activitiservicetasks-repo-amp/activitiservicetasks-repo-amp.iml" filepath="$PROJECT_DIR$/activitiservicetasks-repo-amp/activitiservicetasks-repo-amp.iml" />
+      <module fileurl="file://$PROJECT_DIR$/activitiservicetasks-share-amp/activitiservicetasks-share-amp.iml" filepath="$PROJECT_DIR$/activitiservicetasks-share-amp/activitiservicetasks-share-amp.iml" />
+      <module fileurl="file://$PROJECT_DIR$/repo/repo.iml" filepath="$PROJECT_DIR$/repo/repo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/runner/runner.iml" filepath="$PROJECT_DIR$/runner/runner.iml" />
+      <module fileurl="file://$PROJECT_DIR$/share/share.iml" filepath="$PROJECT_DIR$/share/share.iml" />
+      <module fileurl="file://$PROJECT_DIR$/solr-config/solr-config.iml" filepath="$PROJECT_DIR$/solr-config/solr-config.iml" />
+    </modules>
+  </component>
+</project>
